@@ -50,4 +50,12 @@ main > section div {
 .coluna{
     float: left;
     width: 33.33%;
+
 }
+
+/*pensar como ajustar !!!! assim nao reconhece
+.coluna  > li {
+    align-items: baseline;
+    display: flex;
+}
+

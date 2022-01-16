@@ -1,8 +1,8 @@
 const imagem = document.querySelector('img');
 const botao = document.querySelector('button');
-const nomeDoPersonagem = document.querySelector('#nome');
-const especie = document.querySelector('#especie');
-const condicao = document.querySelector('#status');
+const nomeDoPersonagem = document.querySelector('#nome','#nomeDois','nomeTres');
+const especie = document.querySelector('#especie','#especieDois','#especieTres');
+const condicao = document.querySelector('#status', '#statusDois','#statusTres');
 
 traduzirCondicao = (data) => {
     if(data.status == 'unknown'){

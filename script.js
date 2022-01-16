@@ -1,8 +1,11 @@
-const imagem = document.querySelector('#img-0', '#img-1','#img-2');
-const botao = document.querySelector('button');
-const nomeDoPersonagem = document.querySelector('#nome-0');
-const especie = document.querySelector('#especie-0');
-const condicao = document.querySelector('#status-0');
+const botao = document.querySelector('#buscarPersonagens');
+
+const imagem = document.querySelectorAll('#img, #imgUm, #imgDois');
+const nomeDoPersonagem = document.querySelectorAll('#nome, #nomeUm, #nomeDois');
+const especie = document.querySelectorAll('#especie, #especieUm, #especieDois');
+const condicao = document.querySelectorAll('#status, #statusUm, #statusDois');
+
+let currentIndex = 0;
 
 traduzirCondicao = (data) => {
     if(data.status == 'unknown'){
@@ -27,12 +30,25 @@ pegarPersonagem = () => {
             "Content-type": 'application/json'
         }
     }).then((Response) => Response.json()).then((data) => {
-        imagem.src = data.image;
-        imagem.alt = data.alt;
-        nomeDoPersonagem.innerHTML = data.name;
-        especie.innerHTML = data.species;
-        condicao.innerHTML = traduzirCondicao(data);
+        imagem[currentIndex].src = data.image;
+        imagem[currentIndex].alt = data.alt;
+        nomeDoPersonagem[currentIndex].innerHTML = data.name;
+        especie[currentIndex].innerHTML = data.species;
+        condicao[currentIndex].innerHTML = traduzirCondicao(data);
+
+        currentIndex++;
+
+        if(currentIndex >= 3){
+            currentIndex = 0;
+        }
+
     });
 }
 
-botao.onclick = pegarPersonagem;
+function pegarTresPersonagens(){
+    pegarPersonagem();
+    pegarPersonagem();
+    pegarPersonagem();
+};
+
+botao.onclick = pegarTresPersonagens;

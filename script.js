@@ -14,8 +14,13 @@ traduzirCondicao = (data) => {
     }
 }
 
+gerarValorAletorio = () => {
+    return Math.floor(Math.random() * 671);
+}
+
 pegarPersonagem = () => {
-    return fetch(`https://rickandmortyapi.com/api/character/`, {
+    let numeroAleatorio = gerarValorAletorio();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
         headers: {
             Accept: 'application/json',

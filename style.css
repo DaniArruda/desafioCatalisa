@@ -21,9 +21,9 @@ main{
 }
 
 main > section img {
-    height: 500px;
+    height: 400px;
     margin: 15px 0;
-    width: 400px;
+    width: 300px;
 }
 
 main > section button{

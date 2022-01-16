@@ -14,7 +14,7 @@ body{
 
 main{
     align-items: center;
-    display: inline-block;
+    display: flex;
     height: 100vh;
     justify-content: center;
     position: relative;

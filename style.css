@@ -13,7 +13,7 @@ body{
 
 main{
     align-items: center;
-    display: flex;
+    display: inline-block;
     height: 100vh;
     justify-content: center;
     position: relative;
@@ -38,6 +38,7 @@ main > section button{
     padding: 9px 23px;
     text-transform: uppercase;
     
-
 }
+
+
 

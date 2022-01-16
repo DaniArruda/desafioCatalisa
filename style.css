@@ -50,11 +50,4 @@ main > section div {
 .coluna{
     float: left;
     width: 33.33%;
-  .personas::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-
-
+}

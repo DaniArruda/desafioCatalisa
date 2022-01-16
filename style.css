@@ -47,5 +47,13 @@ main > section div {
     width: 90%;
 }
 
+.coluna{
+    float: left;
+    width: 33.33%;
+  .personas::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 
